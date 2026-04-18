@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* custom for dark mode changing */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-closed {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.menu-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}

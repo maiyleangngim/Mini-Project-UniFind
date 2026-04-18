@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Link Style -->
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+
+  <!-- SEO tags -->
+  <title>UniFind</title>
+  <meta name="description"
+    content="Find the best educational institutions in Cambodia with our comprehensive directory.">
+  <meta name="keywords"
+    content="education directory, Cambodia, schools, universities, colleges, educational institutions, find schools, find universities, find colleges, education resources">
+  <meta name="author" content="Maiy Leangngim">
+  <link rel="icon" type="image/x-icon" href="./assets/images/unifind_icon_only.png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Education Directory-UniFind">
+  <meta property="og:description"
+    content="Find the best educational institutions in Cambodia with our comprehensive directory.">
+  <meta property="og:image" content="./assets/images/unifind_logo.png">
+  <meta property="og:url" content="https://uniFind.com" />
+  <meta property="og:type" content="website">
+</head>
+
+<body class="min-w-[270px] bg-gray-100 dark:bg-gray-950">
+
+
+  <header
+    class="fixed flex top-0 left-0 w-full z-50 bg-gray-100 dark:bg-gray-900 shadow-md justify-between items-center p-2">
+    <nav class="flex w-full items-center justify-between relative">
+      <!-- logo -->
+      <div class="logo flex items-center px-5">
+        <a href="./index.html">
+          <img class="hidden dark:block h-10 md:h-17 w-auto object-contain"
+            src="./assets/images/unifind_icon_wordmark_white.png" alt="UniFind Logo">
+          <img class="block dark:hidden h-10 md:h-17 w-auto object-contain"
+            src="./assets/images/unifind_icon_wordmark.png" alt="UniFind Logo">
+        </a>
+      </div>
+
+
+      <!-- search icon -->
+      <div class="hidden md:flex justify-end items-center gap-5 px-5">
+
+        <!-- desktop menu -->
+        <ul class="hidden gap-4 md:flex lg:flex xl:flex items-center text-gray-950 dark:text-white">
+          <li><a class="hover:text-indigo-500" href="./pages/explore.html">Explore</a></li>
+          <li><a class="hover:text-indigo-500" href="./pages/about.html">About</a></li>
+        </ul>
+        <a href="">
+          <i class="fa-solid fa-search text-gray-950 dark:text-white mr-3 pt-1"></i>
+
+        </a>
+        <a href="./pages/logIn.html"
+          class="bg-indigo-600 px-3 py-1 border border-indigo-600 text-sm rounded-[50px] w-full text-white hover:bg-indigo-700 transition">Sign
+          In</a>
+
+        <!-- button mode  -->
+        <button id="theme-toggle-desktop"
+          class="cursor-pointer p-1 rounded-full bg-white dark:bg-gray-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-lg">
+
+          <!-- Moon icon (show in LIGHT mode) -->
+          <svg id="moon-icon" class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+
+          <!-- Sun icon (show in DARK mode) -->
+          <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+      </div>
+
+
+      <!-- hamburger menu -->
+      <button id="menu-btn" class="md:hidden z-50 cursor-pointer text-indigo-500 focus:outline-none p-2">
+        <i class="fa-solid fa-search  text-sm text-gray-950 dark:text-white mr-3 pt-1"></i>
+        <i class="fa-solid fa-ellipsis-vertical text-sm text-gray-950 dark:text-white  menu-icon z-50"></i>
+      </button>
+
+      <div id="mobile-menu"
+        class="fixed right-0 top-14 w-full z-40 bg-white dark:bg-gray-950 flex flex-col items-start space-y-4 p-4 menu-closed md:hidden transition-all duration-300">
+
+
+        <ul
+          class="gap-4 flex flex-col md:hidden items-start text-gray-950 dark:text-white focus:text-indigo-600 transition p-2">
+          <li><a class="hover:text-indigo-600 " href="./pages/explore.html">Explore</a></li>
+          <li><a class="hover:text-indigo-600 " href="./pages/about.html">About</a></li>
+        </ul>
+        <a href="./pages/logIn.html"
+          class="bg-indigo-600 px-3 py-1 border border-indigo-600 text-sm rounded-[50px] w-auto text-white hover:bg-indigo-700 transition">Sign
+          In</a>
+
+        <!-- button change mode -->
+        <button id="theme-toggle-mobile"
+          class="cursor-pointer p-1 rounded-full bg-white dark:bg-gray-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-lg">
+          <!-- Moon icon (show in LIGHT mode) -->
+          <svg id="moon-icon" class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+
+          <!-- Sun icon (show in DARK mode) -->
+          <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+      </div>
+
+
+      </div>
+
+
+
+    </nav>
+  </header>
+
+
+
+
+  <main class="container mx-auto min-w-[400px] ">
+    <!-- hero section -->
+    <section class="w-full">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-16">
+
+        <!-- Text content -->
+        <div class="w-full md:w-1/2 mt-24 md:mt-32 lg:mt-40">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-300 leading-tight">
+            Find the right university and major for your future
+          </h1>
+
+          <p class="mt-4 text-gray-700 dark:text-gray-400">
+            Navigate the Cambodian educational landscape with curated data, expert insights, and a community of high
+            achievers.
+          </p>
+
+          <a href="./pages/explore.html"
+            class="inline-block mt-6 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full text-sm transition">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="w-full md:w-1/2 mt-8 md:mt-25 flex justify-center">
+          <img
+            src="https://img.freepik.com/premium-photo/3d-cartoon-graduates-robes-stride-confidently-towards-hightech-future-symbolizing-readines_950002-292408.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="Hero Image"
+            class="w-full max-w-md md:max-w-lg lg:max-w-xl h-[350px] md:h-[450px] lg:h-[550px] object-cover rounded-lg shadow-lg" />
+        </div>
+
+      </div>
+    </section>
+    <!-- university section -->
+    <section class="w-full p-6 my-10">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-300">Top Rated Universities</h2>
+        <p class="flex justify-end mb-4"><a href="./pages/explore.html" class="text-indigo-700 hover:text-indigo-800 transition">see
+            more</a></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full h-full">
+          <div class="w-full h-full  flex items-center justify-center rounded-lg shadow-sm">
+            <a href="./pages/universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full h-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://rupp.edu.kh/ifl/english/image_banner/img_ifl_doe.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://www.rupp.edu.kh/logo/rupp_logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Royal University of Phnom Penh
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  We curate only the most impactful opportunities, ensuring Cambodian
+                  students have access to world-class standards and institutions.
+                </p>
+              </article>
+            </a>
+          </div>
+          <div class="w-full h-full  flex items-center justify-center rounded-lg shadow-sm">
+            <a href="./pages/universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full h-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img
+                  src="https://academics-bucket-sj19asxm-prod.s3.ap-southeast-1.amazonaws.com/2387b0ec-4da2-4220-9710-18cd86536da3/feature-image.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/Institute_of_Technology_of_Cambodia_logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Institute of Technology of Cambodia
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  The country's premier institution for technical education and research, playing a central role in
+                  training engineers, scientists, and technologists vital to national development.
+                </p>
+
+              </article>
+            </a>
+          </div>
+          <div class="w-full h-full  flex items-center justify-center rounded-lg shadow-sm ">
+            <a href="./pages/universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full h-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://www.aupp.edu.kh/wp-content/uploads/Students-Life.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/9/98/AUPP_Logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  American University of Phnom Penh
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">International University</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  A private international university in Cambodia offering U.S. style higher education.
+                </p>
+
+              </article>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- major section -->
+    <section class=" w-full p-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold mb-2 text-gray-900 dark:text-gray-300">Featured Majors</h2>
+        <div class="flex flex-row justify-between">
+          <p class="text-gray-700 dark:text-gray-300 mb-6">Explore the most popular majors at our university</p>
+          <p><a href="./pages/explore.html" class="text-indigo-700 hover:text-indigo-800 transition">see more</a></p>
+        </div>
+
+        <!-- Grid container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+
+          <!-- Item 1 -->
+          <a href="./pages/majorDetail.html" class="w-full h-full sm:col-span-2 relative rounded-lg shadow-sm overflow-hidden group">
+
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              alt="" />
+
+            <div class="absolute inset-0 bg-black/50 dark:bg-black/60"></div>
+
+            <div class="relative p-4 flex flex-col gap-4 text-white">
+              <span class="text-indigo-300">
+                <i class="fa-solid fa-laptop-code"></i>
+              </span>
+
+              <article class="flex flex-col gap-3">
+                <h5 class="text-[16px] md:text-[18px] font-bold">
+                  Information Technology
+                </h5>
+                <p class="text-gray-200">
+                  Focuses on managing, maintaining, and supporting the hardware, software, and networks that a company
+                  uses to function.
+                </p>
+              </article>
+            </div>
+          </a>
+
+          <!-- Item 2 -->
+          <a href="./pages/majorDetail.html" class="w-full h-full relative rounded-lg shadow-sm overflow-hidden group">
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              alt="" />
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div class="relative p-4 flex flex-col gap-4 text-white">
+              <span class="text-indigo-300">
+                <i class="fa-solid fa-calculator"></i>
+              </span>
+
+              <article class="flex flex-col gap-3">
+                <h5 class="text-[16px] md:text-[18px] font-bold">
+                  Financial Accounting
+                </h5>
+                <p class="text-gray-200">
+                  Focuses on financial accuracy and compliance
+                </p>
+              </article>
+            </div>
+          </a>
+
+          <!-- Item 3 -->
+          <a href="./pages/majorDetail.html" class="w-full h-full relative rounded-lg shadow-sm overflow-hidden group">
+
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              alt="" />
+
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <div class="relative p-4 flex flex-col gap-4 text-white">
+              <span class="text-indigo-300">
+                <i class="fa-solid fa-briefcase"></i>
+              </span>
+
+              <article class="flex flex-col gap-3">
+                <h5 class="text-[16px] md:text-[18px] font-bold">
+                  Business
+                </h5>
+                <p class="text-gray-200">
+                  Business provides a broad understanding of organizational managemen
+                </p>
+              </article>
+            </div>
+          </a>
+
+          <!-- Item 4 (big on large screens) -->
+          <a href="./pages/majorDetail.html" class="cursor-pointer sm:col-span-2 w-full h-[220px] relative rounded-lg overflow-hidden shadow-sm group">
+
+            <!-- Background image -->
+            <img
+              src="https://8allocate.com/wp-content/uploads/2024/01/The-Future-of-Software-Engineering_-Predictions-for-2024.jpg"
+              alt="Software Engineer"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Text content -->
+            <div class="absolute inset-0 flex flex-col justify-end p-5 text-white">
+
+              <span class="text-sm opacity-80">
+                <i class="fa-solid fa-gears"></i>
+              </span>
+
+              <h5 class="text-[18px] font-bold mt-1">
+                Software Engineer
+              </h5>
+
+              <p class="text-sm text-gray-200">
+                Design and build scalable software solutions for global platforms.
+              </p>
+
+            </div>
+
+          </a>
+
+          <!-- Item 5 -->
+          <a href="./pages/majorDetail.html" class="cursor-pointer sm:col-span-2 w-full h-[220px] relative rounded-lg overflow-hidden shadow-sm group">
+
+            <!-- Background image -->
+            <img
+              src="https://www.sacredheart.edu/media/shu-media/school-of-communication-media-amp-the-arts/art_design_740x317.jpg"
+              alt="Software Engineer"
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Text content -->
+            <div class="absolute inset-0 flex flex-col justify-end p-5 text-white">
+
+              <span class="text-sm opacity-80">
+                <i class="fa-solid fa-brush"></i>
+              </span>
+
+              <h5 class="text-[18px] font-bold mt-1">
+                Design & Art
+              </h5>
+
+              <p class="text-sm text-gray-200">
+                Unleash your creativity with course in Digital Arts and Architecture.
+              </p>
+
+            </div>
+
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+
+
+  <footer class="dark:border-t border-y-gray-800pt-4 md:pt-14 pb-4 bg-gray-200 dark:bg-gray-900">
+    <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 p-2 mb-4 justify-items-center">
+      <!-- column 1 -->
+      <div class="space-y-3 flex flex-col items-center md:items-start pl-2">
+        <div class="m-auto">
+          <a href="./index.html">
+            <img src="./assets/images/unifind_icon_wordmark.png" alt="UniFind Logo"
+              class="block dark:hidden h-17 w-auto object-contain">
+            <img src="./assets/images/unifind_icon_wordmark_white.png" alt="UniFind Logo"
+              class="hidden dark:block h-17 w-auto object-contain">
+          </a>
+        </div>
+        <div class="text-sm space-y-3">
+          <a href="mailto:support@unifind.com"
+            class="block text-gray-400 hover:text-indigo-500 transition ">support@UniFind.com</a>
+          <div class="flex gap-4 items-center md:items-start">
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-facebook-f "></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-youtube"></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- column 2 -->
+      <div class="space-y-3 flex flex-col items-center md:items-start">
+        <div class="m-auto">
+          <a href="https://www.cstad.edu.kh/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/images/ISTAD-logo.png" alt="ISTAD Logo" class="h-17 w-auto object-contain py-2">
+          </a>
+        </div>
+        <div class="text-sm space-y-3">
+          <a href="mailto:info.istad@gmail.com"
+            class="block text-gray-400 hover:text-indigo-500 transition">info.istad@gmail.com</a>
+          <div class="flex gap-4 items-center md:items-start text-white ">
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-facebook-f "></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-youtube"></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- column 3 -->
+      <div class="text-gray-950 dark:text-white text-bold space-y-3">
+        <h4>Quick Links</h4>
+        <ul class="space-y-2 text-gray-950 dark:text-white text-sm flex flex-col items-center md:items-start">
+          <li><a href="./index.html" class=" hover:text-indigo-500  transition">Home</a></li>
+          <li><a href="./pages/explore.html" class=" hover:text-indigo-500  transition">Search</a></li>
+          <li><a href="./pages/explore.html" class=" hover:text-indigo-500  transition">Explore</a></li>
+
+        </ul>
+      </div>
+
+      <!-- column 4 -->
+      <div class="text-gray-950 dark:text-white text-bold space-y-3">
+        <h4>Support</h4>
+        <ul class="space-y-2 text-gray-950 dark:text-white text-sm flex flex-col items-center md:items-start">
+          <li><a href="#" class=" hover:text-indigo-500  transition">FAQs</a></li>
+          <li><a href="./pages/about.html" class=" hover:text-indigo-500  transition">Contact us</a></li>
+          <li><a href="./pages/about.html" class=" hover:text-indigo-500  transition">About us</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-600 pt-4 text-center">
+      <p class="text-gray-950 dark:text-white text-xs">copyright &copy; 2026 UniFind. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/theme-mode.js"></script>
+  <script src="./js/toggleDropMenu.js"></script>
+</body>
+
+</html>

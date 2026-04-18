@@ -1,0 +1,893 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Link Style -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" /> -->
+  <link href="../src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- SEO tags -->
+  <title>UniFind</title>
+  <meta name="description"
+    content="Find the best educational institutions in Cambodia with our comprehensive directory.">
+  <meta name="keywords"
+    content="education directory, Cambodia, schools, universities, colleges, educational institutions, find schools, find universities, find colleges, education resources">
+  <meta name="author" content="Maiy Leangngim">
+  <link rel="icon" type="image/x-icon" href="../assets/images/unifind_icon_only.png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Education Directory-UniFind">
+  <meta property="og:description"
+    content="Find the best educational institutions in Cambodia with our comprehensive directory.">
+  <meta property="og:image" content="../assets/images/unifind_logo.png">
+  <meta property="og:url" content="https://uniFind.com" />
+  <meta property="og:type" content="website">
+</head>
+
+<body class="min-w-[270px] bg-gray-100 dark:bg-gray-950">
+
+
+    <header
+        class="fixed flex top-0 left-0 w-full z-50 bg-gray-100 dark:bg-gray-900 shadow-md justify-between items-center p-2">
+        <nav class="flex w-full items-center justify-between relative">
+            <!-- logo -->
+            <div class="logo flex items-center px-5">
+                <a href="../index.html">
+                    <img class="hidden dark:block h-10 md:h-17 w-auto object-contain"
+                        src="../assets/images/unifind_icon_wordmark_white.png" alt="UniFind Logo">
+                    <img class="block dark:hidden h-10 md:h-17 w-auto object-contain"
+                        src="../assets/images/unifind_icon_wordmark.png" alt="UniFind Logo">
+                </a>
+            </div>
+
+            <!-- search icon -->
+      <div class="hidden md:flex justify-end items-center gap-5 px-5">
+
+        <!-- desktop menu -->
+        <ul class="hidden gap-4 md:flex lg:flex xl:flex items-center text-gray-950 dark:text-white">
+          <li><a class="hover:text-indigo-500" href="./explore.html">Explore</a></li>
+          <li><a class="hover:text-indigo-500" href="./about.html">About</a></li>
+        </ul>
+        <a href="./explore.html">
+          <i class="fa-solid fa-search text-gray-950 dark:text-white mr-3 pt-1"></i>
+
+        </a>
+<a href="./logIn.html"
+          class="bg-indigo-600 px-3 py-1 border border-indigo-600 text-sm rounded-[50px] w-full text-white hover:bg-indigo-700 transition">Sign
+          In</a>
+
+        <!-- button mode  -->
+        <button id="theme-toggle-desktop"
+          class="cursor-pointer p-1 rounded-full bg-white dark:bg-gray-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-lg">
+
+          <!-- Moon icon (show in LIGHT mode) -->
+          <svg id="moon-icon" class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+
+          <!-- Sun icon (show in DARK mode) -->
+          <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+
+      </div>
+
+
+            <!-- hamburger menu -->
+            <button id="menu-btn" class="md:hidden z-50 cursor-pointer text-indigo-500 focus:outline-none p-2">
+                <i class="fa-solid fa-search  text-sm text-gray-950 dark:text-white mr-3 pt-1"></i>
+                <i class="fa-solid fa-ellipsis-vertical text-sm text-gray-950 dark:text-white  menu-icon z-50"></i>
+            </button>
+
+            <div id="mobile-menu"
+                class="fixed right-0 top-14 w-full z-40 bg-white dark:bg-gray-950 flex flex-col items-start space-y-4 p-4 menu-closed md:hidden transition-all duration-300">
+
+
+                <ul
+                    class="gap-4 flex flex-col md:hidden items-start text-gray-950 dark:text-white focus:text-indigo-600 transition p-2">
+                    <li><a class="hover:text-indigo-600 " href="./explore.html">Explore</a></li>
+                    <li><a class="hover:text-indigo-600 " href="./about.html">About</a></li>
+                </ul>
+                <a href="./logIn.html"
+                    class="bg-indigo-600 px-3 py-1 border border-indigo-600 text-sm rounded-[50px] w-auto text-white hover:bg-indigo-700 transition">Sign
+                    In</a>
+
+                <!-- button change mode -->
+                <button id="theme-toggle-mobile"
+                    class="cursor-pointer p-1 rounded-full bg-white dark:bg-gray-950 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition shadow-lg">
+                    <!-- Moon icon (show in LIGHT mode) -->
+                    <svg id="moon-icon" class="w-5 h-5 dark:hidden" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+
+                    <!-- Sun icon (show in DARK mode) -->
+                    <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+
+            </div>
+
+
+            </div>
+
+
+
+        </nav>
+    </header>
+
+
+
+
+  <main class="container m-auto py-16">
+    <!-- carousel section -->
+    <section id="default-carousel" class="relative w-full h-[500px] mt-12 p-4 md:p-4 lg:p-4" data-carousel="slide">
+      <div class="relative h-full overflow-hidden rounded-lg">
+
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="https://www.aupp.edu.kh/wp-content/uploads/Students-Life.jpg"
+            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="AUPP">
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+          <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20 z-20 text-white">
+            <h2 class="text-4xl xl:text-5xl font-bold mb-3 max-w-[60%] leading-tight">
+              American University of Phnom Penh
+            </h2>
+            <p class="text-sm text-gray-200 max-w-[45%] mb-5 leading-relaxed">
+              A private international university in Cambodia offering U.S. style higher education.
+            </p>
+            <div>
+              <a href=""
+                class="bg-indigo-600 px-6 py-2 text-sm rounded-full text-white hover:bg-indigo-700 transition inline-block">
+                See detail
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="https://rupp.edu.kh/ifl/english/image_banner/img_ifl_doe.jpg"
+            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="RUPP">
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+          <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20 z-20 text-white">
+            <h2 class="text-4xl xl:text-5xl font-bold mb-3 max-w-[60%] leading-tight">
+              Royal University of Phnom Penh
+            </h2>
+            <p class="text-sm text-gray-200 max-w-[45%] mb-5 leading-relaxed">
+              A private international university in Cambodia offering U.S. style higher education.
+            </p>
+            <div>
+              <a href=""
+                class="bg-indigo-600 px-6 py-2 text-sm rounded-full text-white hover:bg-indigo-700 transition inline-block">
+                See detail
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="https://schoolscambodia.com/wp-content/uploads/2024/12/Paragon-University-1.jpg"
+            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Paragon">
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+          <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20 z-20 text-white">
+            <h2 class="text-4xl xl:text-5xl font-bold mb-3 max-w-[60%] leading-tight">
+              Paragon International University
+            </h2>
+            <p class="text-sm text-gray-200 max-w-[45%] mb-5 leading-relaxed">
+              A private international university in Cambodia offering U.S. style higher education.
+            </p>
+            <div>
+              <a href=""
+                class="bg-indigo-600 px-6 py-2 text-sm rounded-full text-white hover:bg-indigo-700 transition inline-block">
+                See detail
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="https://cstad.edu.kh/api/v1/medias/view/0828598e-3137-499b-9498-ba335828a1e3.png"
+            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="CSTAD">
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+          <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20 z-20 text-white">
+            <h2 class="text-3xl xl:text-4xl font-bold mb-3 max-w-[60%] leading-tight">
+              Institute of Science and Technology Advanced Development
+            </h2>
+            <p class="text-sm text-gray-200 max-w-[45%] mb-5 leading-relaxed">
+              A private international university in Cambodia offering U.S. style higher education.
+            </p>
+            <div>
+              <a href=""
+                class="bg-indigo-600 px-6 py-2 text-sm rounded-full text-white hover:bg-indigo-700 transition inline-block">
+                See detail
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="https://i.ytimg.com/vi/tyYK24UCLDE/maxresdefault.jpg"
+            class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Norton">
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+          <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20 z-20 text-white">
+            <h2 class="text-4xl xl:text-5xl font-bold mb-3 max-w-[60%] leading-tight">
+              Norton University
+            </h2>
+            <p class="text-sm text-gray-200 max-w-[45%] mb-5 leading-relaxed">
+              A private international university in Cambodia offering U.S. style higher education.
+            </p>
+            <div>
+              <a href=""
+                class="bg-indigo-600 px-6 py-2 text-sm rounded-full text-white hover:bg-indigo-700 transition inline-block">
+                See detail
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots -->
+      <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 pb-2">
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-white transition" aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-white transition" aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-white transition" aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-white transition" aria-label="Slide 4"
+          data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-gray-400 hover:bg-white transition" aria-label="Slide 5"
+          data-carousel-slide-to="4"></button>
+      </div>
+
+      <!-- Prev -->
+      <button type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-6 cursor-pointer group focus:outline-none"
+        data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/30 group-hover:bg-white/50 transition">
+          <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m15 19-7-7 7-7" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+
+      <!-- Next -->
+      <button type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-6 cursor-pointer group focus:outline-none"
+        data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/30 group-hover:bg-white/50 transition">
+          <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m9 5 7 7-7 7" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </section>
+
+    <!-- major section -->
+    <section class="w-full p-4 md:p-4 lg:pd-6 flex flex-col md:flex-row gap-12 mt-10">
+
+      <section class=" flex flex-col mt-10 gap-4 w-full md:w-2/4 lg:w-1/4">
+        <div class="max-w-7xl w-full mx-auto">
+          <h4 class="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-300">Find University</h4>
+          <a class="flex flex-row bg-gray-300 p-2 rounded-lg mb-4 items-center gap-2 text-gray-600 items-center">
+            <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+            <input type="text" placeholder="Search for majors or university..."
+              class="bg-transparent border-none z-50 outline-none text-sm w-full text-gray-950 placeholder-gray-400 focus:ring-0">
+          </a>
+          <h4 class="text-xl font-bold mb-4 text-gray-900 dark:text-gray-300">Field Study</h4>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105 cursor-pointer">Computer
+              Science</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm  hover:scale-105 cursor-pointer">Engineering</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Art
+              and Culture</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Accounting</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">AI
+              engineering</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105   cursor-pointer">Business</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer"><i
+                class="fa-solid fa-ellipsis text-sm"></i></span>
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-gray-900 dark:text-gray-300">University type</h4>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Top
+              ranked university</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Government
+              University</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Private
+              University</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Specialized
+              Universities</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">International
+              University</span>
+            <span
+              class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-sm hover:scale-105  cursor-pointer">Research
+              / National Universities</span>
+
+          </div>
+          <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-300">City</h4>
+
+          <div class="space-y-3">
+
+            <!-- Phnom Penh -->
+            <div class="flex items-center gap-2">
+              <input id="phnom-penh" type="checkbox" class="accent-indigo-600">
+              <label for="phnom-penh" class="text-gray-700 dark:text-gray-300">
+                Phnom Penh
+              </label>
+            </div>
+
+            <!-- Siem Reap -->
+            <div class="flex items-center gap-2">
+              <input id="siem-reap" type="checkbox" class="accent-indigo-600">
+              <label for="siem-reap" class="text-gray-700 dark:text-gray-300">
+                Siem Reap
+              </label>
+            </div>
+
+            <!-- Kompong Cham -->
+            <div class="flex items-center gap-2">
+              <input id="kompong-cham" type="checkbox" class="accent-indigo-600">
+              <label for="kompong-cham" class="text-gray-700 dark:text-gray-300">
+                Kompong Cham
+              </label>
+            </div>
+
+            <!-- Kompong Thom -->
+            <div class="flex items-center gap-2">
+              <input id="kompong-thom" type="checkbox" class="accent-indigo-600">
+              <label for="kompong-thom" class="text-gray-700 dark:text-gray-300">
+                Kompong Thom
+              </label>
+            </div>
+
+            <!-- Prey Veng -->
+            <div class="flex items-center gap-2">
+              <input id="prey-veng" type="checkbox" class="accent-indigo-600">
+              <label for="prey-veng" class="text-gray-700 dark:text-gray-300">
+                Prey Veng
+              </label>
+            </div>
+
+            <!-- Svay Rieng -->
+            <div class="flex items-center gap-2">
+              <input id="svay-rieng" type="checkbox" class="accent-indigo-600">
+              <label for="svay-rieng" class="text-gray-700 dark:text-gray-300">
+                Svay Rieng
+              </label>
+            </div>
+
+            <!-- Kampot -->
+            <div class="flex items-center gap-2">
+              <input id="kampot" type="checkbox" class="accent-indigo-600">
+              <label for="kampot" class="text-gray-700 dark:text-gray-300">
+                Kampot
+              </label>
+            </div>
+
+            <!-- See more -->
+            <div class="pt-2">
+              <button type="button"
+                class="text-sm font-medium text-indigo-600 hover:text-indigo-800 hover:underline flex items-center gap-1">
+                <i class="fa-solid fa-ellipsis"></i>
+                See more
+              </button>
+            </div>
+
+          </div>
+
+
+      </section>
+
+      <!-- results section -->
+      <section class="flex flex-col mt-10 w-full">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="flex flex-row justify-between items-center mb-4">
+            <h4 class="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-300">Institution Found</h4>
+            <span class="text-gray-900 dark:text-gray-300 cursor-pointer">
+              <i class="fa-solid fa-table-cells-large"></i>
+              <i class="fa-solid fa-list"></i>
+            </span>
+          </div>
+
+
+          <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 w-full h-auto">
+            <!-- card 1 -->
+            <a href="./universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://rupp.edu.kh/ifl/english/image_banner/img_ifl_doe.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://www.rupp.edu.kh/logo/rupp_logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Royal University of Phnom Penh
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  We curate only the most impactful opportunities, ensuring Cambodian
+                  students have access to world-class standards and institutions.
+                </p>
+
+
+              </article>
+            </a>
+            <!-- card 2 -->
+            <a href="./universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://cstad.edu.kh/api/v1/medias/view/0828598e-3137-499b-9498-ba335828a1e3.png"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7UbrY0_fNYc-4VKDHs3hZSWSpCT2qDgkSQ&s"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Institute of Science and Techonology Advanced Development
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">IT training institute</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  IT training institute in Cambodia that focuses on developing practical, job-ready skills in
+                  technology.
+                </p>
+
+              </article>
+            </a>
+            <!-- card 3 -->
+            <a href="./universityDetail.html"  class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://www.aupp.edu.kh/wp-content/uploads/Students-Life.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/9/98/AUPP_Logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  American University of Phnom Penh
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">International University</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  A private international university in Cambodia offering U.S. style higher education.
+                </p>
+
+
+              </article>
+            </a>
+            <!-- card 4 -->
+            <a href="./universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img
+                  src="https://academics-bucket-sj19asxm-prod.s3.ap-southeast-1.amazonaws.com/2387b0ec-4da2-4220-9710-18cd86536da3/feature-image.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/Institute_of_Technology_of_Cambodia_logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Institute of Technology of Cambodia
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  The country's premier institution for technical education and research, playing a central role in
+                  training engineers, scientists, and technologists vital to national development.
+                </p>
+
+              </article>
+            </a>
+            <!-- card 5 -->
+            <a href="./universityDetail.html" class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img
+                  src="https://image.free-apply.com/gallery/l/uni/gallery/lg/1011600013/06a45044f47f59c8f3ec4e050161ddc58281666a.jpg?s=640"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/RUFA_new_logo.png/250px-RUFA_new_logo.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Royal University of Fine Arts
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  RUFA is the main university for students who want to study art, design, or cultural fields in
+                  Cambodia, especially those interested in Khmer traditions and creative industries.
+                </p>
+
+
+              </article>
+            </a>
+            <!-- card 6 -->
+            <a href="./universityDetail.html"  class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://cam-ed.edu.kh/wp-content/uploads/2025/09/camed-buidling-2025-scaled-800x475.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQehklNakIQonazmCvM-5F5uPojgP3aUKHnHg&s"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  CamEd Business School
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Specialized Institute</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  CamEd Business School, also known as CamEd Institute, is a private institute of higher education in
+                  Phnom Penh, Cambodia.
+                </p>
+
+
+              </article>
+            </a>
+            <!-- card 7 -->
+            <a href="./universityDetail.html"  class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://khmernote.com.kh/wp-content/uploads/2023/01/RUA.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img
+                    src="https://www.chain-cambodia.eu/sites/default/files/styles/large/public/2024-03/RUA_logo%20200x200.png?itok=OcxpkJf8"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Royal University of Argriculture
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-yellow-200">Top ranked</span>
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Public Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  Located in Phnom Penh, it plays a central role in developing Cambodia’s agricultural workforce,
+                  advancing sustainable farming practices, and supporting national rural development policies.
+
+              </article>
+            </a>
+            <!-- card 8 -->
+            <a href="./universityDetail.html"  class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img src="https://schoolscambodia.com/wp-content/uploads/2024/12/Paragon-University-1.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/C510BAQF-G4ZNbroJSA/company-logo_200_200/company-logo_200_200/0/1630611959170/paragonu_logo?e=2147483647&v=beta&t=hELuPPhhINpP8jsS5IxIp86QD_EKMxRLYczJ4UsdKNM"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Paragon International University
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Private Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  It offers undergraduate, master's, and doctoral programs with an internationally oriented curriculum
+                  and is part of the wider Paragon educational group.
+
+              </article>
+            </a>
+            <!-- card 9 -->
+            <a href="./universityDetail.html"  class="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden
+                  shadow-lg flex flex-col w-full cursor-pointer
+                  transition-all duration-300 ease-out
+                  transform hover:scale-105
+                  hover:shadow-lg hover:-translate-y-1">
+
+              <!-- image -->
+              <div class="w-full h-60 bg-amber-50 dark:bg-amber-950 flex items-center justify-center">
+                <img
+                  src="https://www.angkor.edu.kh/www.angkor.edu.kh/au-panel-v4/admin/assets/uploads/news/thumb_1761639233_ae3bc798.jpg"
+                  class="w-full h-full object-cover" alt="">
+              </div>
+
+              <!-- Content -->
+              <article class="flex flex-col gap-4 p-4">
+
+                <h3 class="text-xl font-medium text-gray-900 dark:text-gray-100 flex gap-4 items-center">
+                  <img src="https://www.angkor.edu.kh/assets/images/AU-icon.png"
+                    class="rounded-full w-[35px] h-[35px] object-cover">
+                  Angkor University
+                </h3>
+
+                <p class="dark:text-gray-400 text-gray-950 text-sm flex items-center gap-2">
+                  <i class="fa-solid fa-location-dot"></i> Siem Reap, Cambodia
+                </p>
+
+                <div class="flex gap-4">
+                  <span class="py-1 text-sm px-2 rounded-lg bg-indigo-300">Private Institution</span>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+                  The Angkor University is a private university located in Siem Reap, Cambodia. Established in 2004, it
+                  offers both undergraduate and postgraduate programs and is recognized by the Cambodian government.
+
+
+              </article>
+            </a>
+
+
+          </div>
+          <div class="flex justify-end mt-4 gap-1 text-sm ">
+            <span class=" rounded-[50%] bg-gray-200  hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1" href=""><i class="fa-solid fa-angle-left text-sm"></i></a></span>
+            <span class="rounded-[50%] bg-gray-200  hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1 md:p-2" href="">1</a></span>
+            <span class=" rounded-[50%] bg-gray-200  hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1 md:p-2" href="">2</a></span>
+            <span class="  rounded-[50%] bg-gray-200 hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1 md:p-2" href="">3</a></span>
+            <span class="  rounded-[50%] bg-gray-200 hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1" href=""><i class="fa-solid fa-ellipsis text-sm"></i></a></span>
+            <span class="  rounded-[50%] bg-gray-200 hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1 md:p-2" href="">9</a></span>
+            <span class="  rounded-[50%] bg-gray-200 hover:text-indigo-500 dark:bg-gray-900 dark:text-gray-300"><a
+                class="p-1" href=""><i class="fa-solid fa-angle-right text-sm"></i></a></span>
+          </div>
+
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+
+
+
+  <footer class="dark:border-t border-y-gray-800pt-4 md:pt-14 pb-4 bg-gray-200 dark:bg-gray-900">
+    <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 p-2 mb-4 justify-items-center">
+      <!-- column 1 -->
+      <div class="space-y-3 flex flex-col items-center md:items-start pl-2">
+        <div class="m-auto">
+          <a href="../index.html">
+            <img src="../assets/images/unifind_icon_wordmark.png" alt="UniFind Logo"
+              class="block dark:hidden h-17 w-auto object-contain">
+            <img src="../assets/images/unifind_icon_wordmark_white.png" alt="UniFind Logo"
+              class="hidden dark:block h-17 w-auto object-contain">
+          </a>
+        </div>
+        <div class="text-sm space-y-3">
+          <a href="mailto:support@unifind.com"
+            class="block text-gray-500 hover:text-indigo-500 transition ">support@UniFind.com</a>
+          <div class="flex gap-4 items-center md:items-start">
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-facebook-f "></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-youtube"></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- column 2 -->
+      <div class="space-y-3 flex flex-col items-center md:items-start">
+        <div class="m-auto">
+          <a href="https://www.cstad.edu.kh/" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/ISTAD-logo.png" alt="ISTAD Logo" class="h-17 w-auto object-contain py-2">
+          </a>
+        </div>
+        <div class="text-sm space-y-3">
+          <a href="mailto:info.istad@gmail.com"
+            class="block text-gray-500 hover:text-indigo-500 transition">info.istad@gmail.com</a>
+          <div class="flex gap-4 items-center md:items-start text-white ">
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-facebook-f "></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-youtube"></i></a>
+            <a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center  text-gray-500 dark:text-white  hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+              href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- column 3 -->
+      <div class="text-gray-950 dark:text-white text-bold space-y-3">
+        <h4>Quick Links</h4>
+        <ul class="space-y-2 text-gray-950 dark:text-white text-sm flex flex-col items-center md:items-start">
+          <li><a href="../index.html" class=" hover:text-indigo-500  transition">Home</a></li>
+          <li><a href="./explore.html" class=" hover:text-indigo-500  transition">Search</a></li>
+          <li><a href="./explore.html" class=" hover:text-indigo-500  transition">Explore</a></li>
+
+        </ul>
+      </div>
+
+      <!-- column 4 -->
+      <div class="text-gray-950 dark:text-white text-bold space-y-3">
+        <h4>Support</h4>
+        <ul class="space-y-2 text-gray-950 dark:text-white text-sm flex flex-col items-center md:items-start">
+          <li><a href="#" class=" hover:text-indigo-500  transition">FAQs</a></li>
+          <li><a href="./about.html" class=" hover:text-indigo-500  transition">Contact us</a></li>
+          <li><a href="./about.html" class=" hover:text-indigo-500  transition">About us</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-300 dark:border-gray-600 pt-4 text-center">
+      <p class="text-gray-950 dark:text-white text-xs">copyright &copy; 2026 UniFind. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/theme-mode.js"></script>
+  <script src="../js/toggleDropMenu.js"></script>
+  <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+</body>
+
+</html>
